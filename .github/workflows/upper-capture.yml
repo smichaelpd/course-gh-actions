@@ -9,6 +9,8 @@ on:
 
 jobs:
     capture:
+        permissions:
+            contents: write
         strategy:
           matrix:
             name: [ upper, upper-1, upper-2 ]
@@ -30,3 +32,13 @@ jobs:
               with:
                 path: ./upper/upper
                 name: "build-${{ matrix.name }}"
+            - uses: softprops/action-gh-release@v2
+              with:
+                tag_name: ${{ github.ref }}
+                files: ./upper/upper
+                name: "build-${{ matrix.name }}"
+                body: |
+                  # Release Notes
+                  - build-${{ matrix.name }}: ${{ github.sha }}
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
