@@ -1,1 +1,1 @@
-[![upper-capture](https://github.com/smichaelpd/course-gh-actions/actions/workflows/upper-capture.yml/badge.svg)](https://github.com/smichaelpd/course-gh-actions/actions/workflows/upper-capture.yml)
+[![upper-capture](https://github.com/smichaelpd/course-gh-actions/actions/workflows/upper-capture.yml/badge.svg?branch=main&event=pull_request)](https://github.com/smichaelpd/course-gh-actions/actions/workflows/upper-capture.yml)
